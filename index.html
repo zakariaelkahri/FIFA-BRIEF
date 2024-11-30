@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="./src/assets/css/style.css" />
     <title>FIFA25</title>
   </head>
-
+  <script
+    src="https://kit.fontawesome.com/e9ee48a8e3.js"
+    crossorigin="anonymous"
+  ></script>
   <body class="hero">
     <div class="top">
       <h1 class="fifaheader">EA FC 25 Tactics & Formations</h1>
@@ -19,13 +22,21 @@
           src="./src/assets/img/formation.png"
           alt="formation"
         />
-        <div class="player-card" id="player1">
+        <div class="player-card LW">
           <div class="card-container">
             <div class="teams">
-                <img width="13em" src="https://cdn.sofifa.net/flags/fr.png" alt="nationality">
-                <img width="15em" src="https://cdn.sofifa.net/meta/team/7980/120.png" alt="corrent team">
+              <img
+                width="13em"
+                src="https://cdn.sofifa.net/flags/fr.png"
+                alt="nationality"
+              />
+              <img
+                width="15em"
+                src="https://cdn.sofifa.net/meta/team/7980/120.png"
+                alt="corrent team"
+              />
             </div>
-            <p class="rating">87<span>CM</span></p>
+            <p class="rating"><span id="rating1">87</span></p>
             <img
               class="back-img"
               src="./src/assets/img/badge_gold.webp"
@@ -35,23 +46,24 @@
             <div class="card-content">
               <img
                 class="player"
+                id="player-pic"
                 src="https://cdn.sofifa.net/players/215/914/25_120.png"
                 height="60em"
                 alt="pic-player"
               />
               <p class="name">Kanté</p>
               <div class="statistics">
-                <p class="stats">PAC<span>83</span></p>
-                <p class="stats">SHOT<span>90</span></p>
-                <p class="stats">PAS<span>83</span></p>
-                <p class="stats">DRI<span>83</span></p>
-                <p class="stats">DEF<span>83</span></p>
-                <p class="stats">PHY<span>83</span></p>
+                <p class="stats">PAC<span id="pac">83</span></p>
+                <p class="stats">SHOT<span id="shot">90</span></p>
+                <p class="stats">PAS<span id="pas">83</span></p>
+                <p class="stats">DRI<span id="dri">83</span></p>
+                <p class="stats">DEF<span id="def">83</span></p>
+                <p class="stats">PHY<span id="phy">83</span></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="player-card" id="player2">
+        <div class="player-card RW">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -79,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player3">
+        <div class="player-card ST">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -107,7 +119,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player4">
+        <div class="player-card CDM">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -135,7 +147,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player5">
+        <div class="player-card CM1">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -163,7 +175,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player6">
+        <div class="player-card CM2">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -191,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player7">
+        <div class="player-card CB1">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -219,7 +231,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player8">
+        <div class="player-card CB2">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -247,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player9">
+        <div class="player-card RB">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -275,7 +287,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player10">
+        <div class="player-card LB">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -303,7 +315,7 @@
             </div>
           </div>
         </div>
-        <div class="player-card" id="player11">
+        <div class="player-card GK">
           <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -333,7 +345,7 @@
         </div>
       </div>
       <div class="formular">
-        <form class="playerinfo">
+        <form id="playerinfo">
           <h2 class="cardheader">Add Player Card</h2>
 
           <div class="input">
@@ -342,41 +354,32 @@
           </div>
           <div class="input">
             <label for="image ">image :</label>
-            <input type="file" name="image" id="image" />
+            <input type="text" name="image" id="image" />
           </div>
 
           <div class="input">
-            <select name="position" id="position">
-                <option value="position">position</option>
-                <option value="GK">GK</option>
-                <option value="RB">RB</option>
-                <option value="CB">CB</option>
-                <option value="LB">LB</option>
-                <option value="CDM">CDM</option>
-                <option value="CM">CM</option>
-                <option value="RW">RW</option>
-                <option value="ST">ST</option>
-                <option value="LW">LW</option>
+            <select name="position" class="position" id="position">
+              <option value="position">position</option>
+              <option value="GK">GK</option>
+              <option value="RB">RB</option>
+              <option value="CB">CB</option>
+              <option value="LB">LB</option>
+              <option value="CDM">CDM</option>
+              <option value="CM">CM</option>
+              <option value="RW">RW</option>
+              <option value="ST">ST</option>
+              <option value="LW">LW</option>
             </select>
           </div>
 
           <div class="input">
-            <label for="nationality">nationality :</label>
-            <input type="text" name="nationality" id="nationality" />
-          </div>
-
-          <div class="input">
             <label for="flag">flag :</label>
-            <input type="file" name="flag" id="flag" placeholder="flag" />
-          </div>
-          <div class="input">
-            <label for="club">club :</label>
-            <input type="text" name="club" id="club" />
+            <input type="text" name="flag" id="flag" />
           </div>
 
           <div class="input">
             <label for="logo">logo :</label>
-            <input type="file" name="logo" id="logo" />
+            <input type="text" name="logo" id="logo" />
           </div>
 
           <div class="player-inputs">
@@ -453,19 +456,25 @@
           </div>
           <div class="gk-inputs">
             <div class="input">
-              <label for="rating">rating :</label>
+              <label for="rating2">rating :</label>
               <input
                 min="10"
                 max="99"
                 type="number"
                 name="rating"
-                id="rating"
+                id="rating2"
               />
             </div>
 
             <div class="input">
               <label for="diving">diving :</label>
-              <input min="10" max="99" type="number" name="diving" id="diving" />
+              <input
+                min="10"
+                max="99"
+                type="number"
+                name="diving"
+                id="diving"
+              />
             </div>
 
             <div class="input">
@@ -503,13 +512,7 @@
 
             <div class="input">
               <label for="speed">speed :</label>
-              <input
-                min="10"
-                max="99"
-                type="number"
-                name="speed"
-                id="speed"
-              />
+              <input min="10" max="99" type="number" name="speed" id="speed" />
             </div>
 
             <div class="input">
@@ -524,9 +527,58 @@
             </div>
           </div>
 
-          <button type="submit" class="add">Add player</button>
+          <button type="button" class="add" id="add">Add player</button>
         </form>
       </div>
+      <div id="bensh">
+        <div class="player">
+          <div class="card-container">
+            <div id="icons">
+              <i class="icon2 fa-solid fa-arrow-up-long"></i>
+              <i class="icon fa-solid fa-trash"></i>
+              <i class="icon1 fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="teams">
+              <img
+                width="13em"
+                src="https://cdn.sofifa.net/flags/fr.png"
+                alt="nationality"
+              />
+              <img
+                width="15em"
+                src="https://cdn.sofifa.net/meta/team/7980/120.png"
+                alt="corrent team"
+              />
+            </div>
+            <p class="rating">87<span>CM</span></p>
+            <img
+              class="back-img"
+              src="./src/assets/img/badge_gold.webp"
+              width="100em"
+              alt="back-img"
+            />
+            <div class="card-content">
+              <img
+                class="player"
+                src="https://cdn.sofifa.net/players/215/914/25_120.png"
+                height="60em"
+                alt="pic-player"
+              />
+              <p class="name">Kanté</p>
+              <div class="statistics">
+                <p class="stats">PAC<span>83</span></p>
+                <p class="stats">SHOT<span>90</span></p>
+                <p class="stats">PAS<span>83</span></p>
+                <p class="stats">DRI<span>83</span></p>
+                <p class="stats">DEF<span>83</span></p>
+                <p class="stats">PHY<span>83</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script src="./src/assets/js/main.js"></script>
   </body>
 </html>

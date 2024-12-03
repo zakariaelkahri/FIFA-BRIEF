@@ -369,8 +369,9 @@ function removeCard(event) {
 
 function updatCard(event) {
   let cardContainer = event.target.closest(".card-container");
-  let  posi = event.target.closest(".card-container").querySelector('.rating').querySelector('.post').textContent
+  let  posi = cardContainer.querySelector('.rating').querySelector('.post').textContent
   if ((posi == `GK`)) {
+    
     document.querySelector(".player-inputs").style.display = "none";
     document.querySelector(".gk-inputs").style.display = "flex";
 

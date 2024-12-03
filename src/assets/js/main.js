@@ -112,7 +112,7 @@ function addTobensh(obj) {
                    alt="corrent team"
                  />
                </div>
-               <p class="rating"><span id="rating">${obj.rating1}</span><span class="post">${obj.position}</span></p>
+               <p class="rating"><span id="rating">${obj.rating}</span><span class="post">${obj.position}</span></p>
                
                <div id="icons">
                  <button onclick="lets(event)" id="btnn" ><i class="fa-solid fa-arrow-up-long"></i></button>
@@ -194,7 +194,6 @@ btn.addEventListener("click", () => {
 function lets(event) {
   let cardContainer = event.target.closest(".player");
   let poste = cardContainer.querySelector(".post").innerHTML;
-  console.log(poste);
   if (poste == `GK`) {
     let replace = GK.innerHTML;
     GK.innerHTML = "";

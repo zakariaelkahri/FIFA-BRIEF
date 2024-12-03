@@ -91,7 +91,7 @@
             </div>
           </div> -->
         </div>
-        <div class="player-card ST"  id="ST">
+        <div class="player-card ST" id="ST">
           <!-- <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -147,7 +147,7 @@
             </div>
           </div> -->
         </div>
-         <div class="player-card CM1" id="CM1"> 
+        <div class="player-card CM1" id="CM1">
           <!-- <div class="card-container">
             <p class="rating">87<span>CM</span></p>
             <img
@@ -174,7 +174,7 @@
               </div>
             </div>
           </div> -->
-        </div> 
+        </div>
         <div class="player-card CM2" id="CM2">
           <!-- <div class="card-container">
             <p class="rating">87<span>CM</span></p>
@@ -359,23 +359,25 @@
 
           <div class="input">
             <select name="position" class="position" id="position">
-              <option value="GK">GK</option>
+              <!-- <option value="Options">Options</option> -->
+              
+              <option value="CB1">CB1</option>
+              <option value="CB2">CB2</option>
               <option value="RB">RB</option>
-              <option value="CB">CB1</option>
-              <option value="CB">CB2</option>
               <option value="LB">LB</option>
               <option value="CDM">CDM</option>
-              <option value="CM">CM1</option>
-              <option value="CM">CM2</option>
+              <option value="CM1">CM1</option>
+              <option value="CM2">CM2</option>
               <option value="RW">RW</option>
               <option value="ST">ST</option>
               <option value="LW">LW</option>
+              <option  value="GK">GK</option>
             </select>
           </div>
 
           <div class="input">
             <label for="flag">flag :</label>
-            <input type="text" name="flag" id="flag" />
+            <input type="text" name="flag" id="flags" />
           </div>
 
           <div class="input">
@@ -391,7 +393,7 @@
                 max="99"
                 type="number"
                 name="rating"
-                id="rating"
+                id="ratings"
               />
             </div>
 
@@ -531,57 +533,8 @@
           <button type="button" class="add" id="add">Add player</button>
         </form>
       </div>
-      
 
-      <div id="bensh">
-        <div class="player" >
-          <div class="card-container">
-            <div class="teams">
-              <img
-                width="13em"
-                src="https://cdn.sofifa.net/flags/fr.png"
-                alt="nationality"
-              />
-              <img
-                width="15em"
-                src="https://cdn.sofifa.net/meta/team/7980/120.png"
-                alt="corrent team"
-              />
-            
-            </div>
-            <p class="rating">87<span class="post">CM1</span></p>
-            <div id="icons">
-              <button onclick="lets(event)" id="btnn" ><i class="fa-solid fa-arrow-up-long"></i></button>
-              <button onclick="removeCard(event)" id="btnn" ><i class="icon fa-solid fa-trash" ></i></button>
-              <button onclick="" id="btnn" ><i class="icon1 fa-solid fa-pen-to-square"></i></button>
-            </div>
-            <img
-              class="back-img"
-              src="./src/assets/img/badge_gold.webp"
-              width="100em"
-              alt="back-img"
-            />
-
-            <div class="card-content">
-              <img
-                class="player"
-                src="https://cdn.sofifa.net/players/215/914/25_120.png"
-                height="60em"
-                alt="pic-player"
-              />
-              <p class="name">Kanté</p>
-              <div class="statistics">
-                <p class="stats">PAC<span>83</span></p>
-                <p class="stats">SHOT<span>90</span></p>
-                <p class="stats">PAS<span>83</span></p>
-                <p class="stats">DRI<span>83</span></p>
-                <p class="stats">DEF<span>83</span></p>
-                <p class="stats">PHY<span>83</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="bensh"></div>
     </div>
 
     <script src="./src/assets/js/main.js"></script>

@@ -3,7 +3,7 @@
     background-size:150em;
     position: relative;
     background-image: url(../img/stadium_background.webp);
-    padding: 3rem;
+background-size: cover no-repeat;    padding: 1rem;
 
 }
 
@@ -27,7 +27,7 @@
 .section {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 2rem;
 
 
 }
@@ -184,7 +184,7 @@
 #playerinfo {
 
     backdrop-filter: blur(10px);
-    width: 15em;
+    width: 26em;
     background-size: cover;
     padding: 1em;
     border-radius: 10px;
@@ -225,7 +225,7 @@
 }
 
 .player-inputs {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }

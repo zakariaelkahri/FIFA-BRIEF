@@ -29,7 +29,7 @@ let CM2 = document.getElementById("CM2");
 let ST = document.getElementById("ST");
 let RW = document.getElementById("RW");
 let LW = document.getElementById("LW");
-function positionselect(){
+function toggleStatistics(){
 position.addEventListener("change", () => {
   if (position.value == "GK") {
     document.querySelector(".player-inputs").style.display = "none";
@@ -40,7 +40,7 @@ position.addEventListener("change", () => {
   }
 });
 }
-positionselect()
+toggleStatistics()
 function addTobensh(obj) {
   if (position.value == "GK") {
     bensh.innerHTML += `          <div class="player" id="">
@@ -60,7 +60,7 @@ function addTobensh(obj) {
                    alt="corrent team"
                  />
                </div>
-               <p class="rating"><span id="rating44">${obj.rating}</span><span class="post">${obj.position}</span></p>
+               <p class="rating"><span id="rating">${obj.rating1}</span><span class="post">${obj.position}</span></p>
                
                <div id="icons">
                  <button onclick="lets(event)" id="btnn" ><i class="fa-solid fa-arrow-up-long"></i></button>
@@ -112,7 +112,7 @@ function addTobensh(obj) {
                    alt="corrent team"
                  />
                </div>
-               <p class="rating"><span id="rating4">${obj.rating}</span><span class="post">${obj.position}</span></p>
+               <p class="rating"><span id="rating">${obj.rating1}</span><span class="post">${obj.position}</span></p>
                
                <div id="icons">
                  <button onclick="lets(event)" id="btnn" ><i class="fa-solid fa-arrow-up-long"></i></button>
@@ -164,7 +164,7 @@ btn.addEventListener("click", () => {
     dribbling: formValue.get("dribbling"),
     defending: formValue.get("defending"),
     physical: formValue.get("physical"),
-    rating1: formValue.get("rating1"),
+    rating1: formValue.get("rating2"),
     diving: formValue.get("diving"),
     handling: formValue.get("handling"),
     kicking: formValue.get("kicking"),
@@ -173,6 +173,7 @@ btn.addEventListener("click", () => {
     speed: formValue.get("speed"),
   };
   plrs.push(obj);
+  console.log(obj.rating1)
   if( obj.position == "GK"){
     if(!obj.name ||!obj.photo ||!obj.position ||!obj.flag ||!obj.logo ||!obj.rating1 ||!obj.diving ||!obj.handling ||!obj.kicking ||!obj.reflexes ||!obj.positioning ||!obj.speed ){
       alert("Please fill all the empty inputs of (GK) required !! ");
@@ -324,7 +325,7 @@ function dataCard(pl) {
                    alt="corrent team"
                  />
                </div>
-               <p class="rating"><span id="rating44">${ele.rating}</span><span class="post">${ele.position}</span></p>
+               <p class="rating"><span id="rating">${ele.rating}</span><span class="post">${ele.position}</span></p>
         
                <div id="icons">
                  <button onclick="lets(event)" id="btnn" ><i class="fa-solid fa-arrow-up-long"></i></button>
@@ -369,7 +370,7 @@ function removeCard(event) {
 
 function updatCard(event) {
   let cardContainer = event.target.closest(".card-container");
-  let  posi = cardContainer.querySelector('.post').textContent
+  let  posi = cardContainer.querySelector('.rating').querySelector('.post').textContent
   if ((posi == `GK`)) {
     
     document.querySelector(".player-inputs").style.display = "none";
@@ -377,7 +378,7 @@ function updatCard(event) {
 
     let name = cardContainer.querySelector(".name").innerText;
     let playerPic = cardContainer.querySelector("#player-pic").src;
-    let rating = cardContainer.querySelector("#rating44").innerText;
+    let rating = cardContainer.querySelector("#rating").innerText;
     let flag = cardContainer.querySelector("#flag").src;
     let team = cardContainer.querySelector("#team").src;
     let div = cardContainer.querySelector("#div").innerText;
@@ -407,7 +408,7 @@ function updatCard(event) {
 
     let name = cardContainer.querySelector(".name").innerText;
     let playerPic = cardContainer.querySelector("#player-pic").src;
-    let rating = cardContainer.querySelector("#rating4").innerText;
+    let rating = cardContainer.querySelector("#rating").innerText;
     let flag = cardContainer.querySelector("#flag").src;
     let team = cardContainer.querySelector("#team").src;
     let pac = cardContainer.querySelector("#pac").innerText;

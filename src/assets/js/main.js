@@ -1,14 +1,15 @@
-function getData() {
+function getData(){
   fetch("./players.json")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      let pl = data;
-      dataCard(pl);
-    });
-}
-getData();
+  .then((res)=>{
+    return res.json()
+  })
+  .then((data)=> {
+    dataCard(data)
+  })
+} 
+  getData();
+  
+
 
 // variables:
 const plrs = [];
@@ -252,8 +253,8 @@ function lets(event) {
   }
 }
 
-function dataCard(pl) {
-  pl.players.map((ele) => {
+function dataCard(data) {
+  data.players.map((ele) => {
     bensh.innerHTML += `          <div class="player" id="">
              <div class="card-container">
    
@@ -306,7 +307,7 @@ function dataCard(pl) {
              </div>
            </div>         `;
   });
-  pl.goalkeepers.map((ele) => {
+  data.goalkeepers.map((ele) => {
     bensh.innerHTML += `          <div class="player" id="">
              <div class="card-container">
    

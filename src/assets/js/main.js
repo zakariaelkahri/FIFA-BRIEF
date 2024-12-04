@@ -9,8 +9,6 @@ function getData(){
 } 
   getData();
   
-
-
 // variables:
 const plrs = [];
 let formul = document.querySelector("#playerinfo");
@@ -435,6 +433,8 @@ function updatCard(event) {
 
   }
 }
+
+
 
 
 
